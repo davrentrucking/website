@@ -228,7 +228,6 @@ li a{
 	background-color: #fff;
 	grid-column: span 3;
 	grid-row: span 1;
-	height: 770px;
 	padding: 0 100px ;
 	color: #9B9D9E;
 	font-family: 'Source Sans Pro', sans-serif;
@@ -277,6 +276,7 @@ li a{
 #services{  
 	grid-row: span 1;
 	grid-column: span 3;
+	height: 650px;
 	padding: 40px;
 	background:url('riverside.jpg');
 	background-repeat: no-repeat;
