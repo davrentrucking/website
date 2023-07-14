@@ -277,7 +277,6 @@ li a{
 #services{  
 	grid-row: span 1;
 	grid-column: span 3;
-	height: 650px;
 	padding: 40px;
 	background:url('riverside.jpg');
 	background-repeat: no-repeat;
