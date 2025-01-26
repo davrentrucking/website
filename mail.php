@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     
 
-    $to = "dispatch@davrentrucking.com"; // Replace with your email address
+    $to = "s1dxu9@gmail.com"; // Replace with your email address
     $subject = "New Contact Form Submission";
 
     $headers = "From: $email";
@@ -51,8 +51,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $mailBody .= "City: $city\n";
     $mailBody .= "Message:\n$message";
 
-    $to = "dispatch@davrentrucking.com"; // Replace with your email address
-    $subject = "Logistip contact";
+    $to = "s1dxu9@gmail.com"; // Replace with your email address
+    $subject = "Logistip Scontact";
 
     $message_2 = '<html>
     <head>
