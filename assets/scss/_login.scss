@@ -1,0 +1,6 @@
+// login and register css
+.section-register {
+    padding-top: 220px;
+    @media (max-width: 1600px) { padding-top: 190px; }
+    @include media-breakpoint-down(lg){ padding-top: 150px; }
+}

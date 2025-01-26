@@ -1,0 +1,364 @@
+// === Header-Section ========================================= >>>>>
+
+.logistics-toggler-icon{
+    --#{$prefix}logistics-toggler-icon-stroke-color: #253B2F;  
+    svg{        
+        stroke: var(--#{$prefix}logistics-toggler-icon-stroke-color); 
+    }
+}
+.navbar-brand{
+    @include media-breakpoint-down(lg){
+        img{
+            width: 165px;
+        }
+    }
+}
+.section-header{
+    background-color: var(--#{$prefix}header-bg);
+    --#{$prefix}header-box-shadow: 0 4px 20px rgba(var(--#{$prefix}secondary-rgb), .065); 
+    transition: all .4s ease-in-out;
+    box-shadow: var(--#{$prefix}header-box-shadow);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;   
+    &.header-tra{
+        --#{$prefix}header-tra-navbar-color : var(--#{$prefix}white);        
+        --#{$prefix}header-tra-bg : transparent;        
+        --#{$prefix}header-tra-padding-top : 45px;        
+        --#{$prefix}header-bg: var(--#{$prefix}header-tra-bg);        
+        padding-top: var(--#{$prefix}header-tra-padding-top);
+        .logistics-navbar{
+            --#{$prefix}navbar-color: var(--#{$prefix}header-tra-navbar-color);  
+            .navbar-nav{
+                --#{$prefix}nav-link-padding-y: 2rem;
+                @include media-breakpoint-down(xxl){        
+                    --#{$prefix}nav-link-padding-y: 1.8rem;        
+                }
+                @include media-breakpoint-down(xl){        
+                    --#{$prefix}nav-link-padding-y: 1px;        
+                }
+            }
+        }   
+        .btn-primary{
+            --#{$prefix}btn-hover-bg: var(--#{$prefix}white);
+            --#{$prefix}btn-active-bg: var(--#{$prefix}white);
+            --#{$prefix}btn-hover-color: var(--#{$prefix}secondary);
+            --#{$prefix}btn-active-color: var(--#{$prefix}secondary); 
+            --#{$prefix}btn-hover-border-color: var(--#{$prefix}white);   
+            --#{$prefix}btn-active-border-color: var(--#{$prefix}white);
+        }
+        .header-icon{
+            --#{$prefix}header-icon-bg : rgba(var(--#{$prefix}body-color-style-3-rgb), .15);
+            --#{$prefix}header-icon-stroke-color: var(--#{$prefix}white);
+        }
+        .logo-dark{
+            display: none;
+        }
+        .logistics-toggler-icon{
+            --#{$prefix}logistics-toggler-icon-stroke-color: #fff; 
+        }
+        @include media-breakpoint-down(xxl){
+            --#{$prefix}header-tra-padding-top : 30px;
+        }
+        @include media-breakpoint-down(xl){        
+            --#{$prefix}header-tra-navbar-color : var(--#{$prefix}heading-color-style-1);   
+            .header-icon{
+                --#{$prefix}header-icon-bg : var(--#{$prefix}body-color-style-3);
+                --#{$prefix}header-icon-stroke-color: var(--#{$prefix}secondary);
+            }   
+        }
+        @include media-breakpoint-down(md){
+            --#{$prefix}header-tra-padding-top : 16px;
+        }
+    }
+
+    &.sticky{        
+        position: fixed;
+        z-index: 999;
+        width: 100%;
+        top: 0;
+        left: 0;
+        animation: header-fadeInDown .7s ease-in-out 0s 1 normal none running;
+        transition: all .3s ease-in-out;
+        @keyframes header-fadeInDown {
+            0% {                
+                transform: translateY(-100%);
+            }
+            100% {                
+                transform: translateY(0);
+            }
+        }
+        .navbar-nav{
+            --#{$prefix}nav-link-padding-y: 2rem;
+            @include media-breakpoint-down(xl){        
+                --#{$prefix}nav-link-padding-y: 1px;        
+            }
+        }
+        
+        .top-bar{
+            display: none;
+        }  
+        &.header-2{
+            padding: 0;
+        }      
+        .logistics-navbar .logistics-navbar-inner{
+            border-radius: 0 0 4px 4px;
+            animation: fadeInDown .7s ease-in-out 0s 1 normal none running;
+            transition: all .3s ease-in-out;
+        }  
+        .custom-align{
+            @include media-breakpoint-up(xl){
+                --#{$prefix}custom-padding-bottom: 6px;
+                padding-bottom: var(--#{$prefix}custom-padding-bottom);
+                .dropdown .dropdown-menu.show{
+                    top: 100% !important;
+                }
+            }
+        }
+        &.header-tra{
+            --#{$prefix}header-tra-navbar-color : var(--#{$prefix}heading-color-style-1);
+            --#{$prefix}header-tra-bg : var(--#{$prefix}body-bg);
+            --#{$prefix}header-tra-padding-top : 0;
+            .header-icon{
+                --#{$prefix}header-icon-bg : var(--#{$prefix}body-color-style-3);
+                --#{$prefix}header-icon-stroke-color: var(--#{$prefix}secondary);
+            }
+            .logo-dark{
+                display: block;
+            }
+            .logo-white{
+                display: none;
+            }            
+            .logistics-toggler-icon{
+                --#{$prefix}logistics-toggler-icon-stroke-color: #253B2F; 
+            }
+            .btn-primary{
+                --#{$prefix}btn-hover-bg: var(--#{$prefix}secondary);
+                --#{$prefix}btn-active-bg: var(--#{$prefix}secondary);
+                --#{$prefix}btn-hover-color: var(--#{$prefix}white);
+                --#{$prefix}btn-active-color: var(--#{$prefix}white); 
+                --#{$prefix}btn-hover-border-color: var(--#{$prefix}secondary);   
+                --#{$prefix}btn-active-border-color: var(--#{$prefix}secondary);
+            }
+        }
+    }
+}
+.header-icon{
+    --#{$prefix}header-icon-bg : var(--#{$prefix}body-color-style-3);
+    --#{$prefix}header-icon-size: 50px;
+    --#{$prefix}header-icon-stroke-color: var(--#{$prefix}secondary);
+    width: var(--#{$prefix}header-icon-size);
+    height: var(--#{$prefix}header-icon-size);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--#{$prefix}header-icon-bg);
+    
+    svg{
+        transition: all .3s ease-in-out;
+    }
+    &:hover{
+        --#{$prefix}header-icon-stroke-color: var(--#{$prefix}primary) !important;
+    }
+}
+
+.header-1{
+    --#{$prefix}header-bg: var(--#{$prefix}bg-custom-light);
+}
+.header-2{
+    --#{$prefix}header-bg: var(--#{$prefix}body-bg);
+    padding: 20px 0 40px 0;
+    @include media-breakpoint-down(lg){
+        padding: 0;
+    }
+}
+// === Header-Section ========================================= >>>>>
+
+
+
+// === Navbar ========================================= >>>>>
+.logistics-navbar{
+    --#{$prefix}navbar-padding-y: 0;
+    --#{$prefix}navbar-color: var(--#{$prefix}heading-color-style-1);
+    --#{$prefix}navbar-hover-color: var(--#{$prefix}primary);
+    --#{$prefix}navbar-active-color: var(--#{$prefix}primary);
+
+    .nav-link{
+        position: relative;
+        transition: $transition-base;
+        text-transform: uppercase;
+
+        &:hover, &.show{
+            --#{$prefix}nav-link-font-weight: 500;
+            .dropdown-icon{
+                --#{$prefix}dropdown-icon-stroke-color: var(--#{$prefix}navbar-active-color);
+            }
+        }
+        &.active{
+            --#{$prefix}nav-link-font-weight: 500;
+            .dropdown-icon{
+                --#{$prefix}dropdown-icon-stroke-color: var(--#{$prefix}navbar-active-color);
+            }
+            .nav-title{
+                position: relative;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: -3px;
+                    width: 100%;
+                    height: 2px;
+                    background: var(--#{$prefix}navbar-active-color);
+                }
+            }            
+        }        
+    }
+    &.custom-align{
+        --#{$prefix}custom-spacing: 5px;
+        @include media-breakpoint-up(xl){
+            .offcanvas-body{
+                position: relative;
+                top: var(--#{$prefix}custom-spacing);
+
+                .dropdown .dropdown-menu.show{
+                    top: calc(100% - var(--#{$prefix}custom-spacing));
+                }
+            }
+        }
+    }
+    .navbar-nav{
+        --#{$prefix}nav-link-padding-y: 2.9384rem;
+        @include media-breakpoint-down(xxl){        
+            --#{$prefix}nav-link-padding-y: 2.2rem;        
+        }
+        @include media-breakpoint-down(xl){        
+            --#{$prefix}nav-link-padding-y: 1px;        
+        }
+    }    
+       
+    .logistics-navbar-inner{
+        --#{$prefix}logistics-navbar-inner-bg: var(--#{$prefix}primary);
+        --#{$prefix}navbar-color: #D9F8FF;
+        --#{$prefix}navbar-hover-color: var(--#{$prefix}white);
+        --#{$prefix}navbar-active-color: var(--#{$prefix}white);
+        .logistics-toggler-icon{
+            --#{$prefix}logistics-toggler-icon-stroke-color: var(--#{$prefix}navbar-active-color); 
+        }
+        .dropdown-icon {
+            --#{$prefix}dropdown-icon-stroke-color: var(--#{$prefix}navbar-color);
+            transition: $transition-base;
+        }        
+        .nav-link{
+            &:hover,&.show,&.active{
+                --#{$prefix}nav-link-font-weight: 500;
+                .dropdown-icon{
+                    --#{$prefix}dropdown-icon-stroke-color: var(--#{$prefix}navbar-active-color);
+                }
+            }            
+        }
+        background-color: var(--#{$prefix}logistics-navbar-inner-bg);
+        border-radius: 4px;
+        padding: 0 40px;
+        position: absolute;
+        left: 0;
+        z-index: 3;   
+        top: 0;     
+        .offcanvas{
+            --#{$prefix}offcanvas-bg: var(--#{$prefix}primary); 
+        }     
+        .btn-secondary{     
+            --#{$prefix}btn-hover-border-color: var(--#{$prefix}white);  
+            --#{$prefix}btn-active-border-color: var(--#{$prefix}white);  
+            --#{$prefix}btn-hover-bg: var(--#{$prefix}white);  
+            --#{$prefix}btn-active-bg: var(--#{$prefix}white); 
+            --#{$prefix}btn-hover-color: var(--#{$prefix}secondary);  
+            --#{$prefix}btn-active-color: var(--#{$prefix}secondary);
+        } 
+        
+        .navbar-nav{
+            --#{$prefix}nav-link-padding-y: 1.8rem;  
+            @include media-breakpoint-down(xl){        
+                --#{$prefix}nav-link-padding-y: 1px;        
+            }        
+        } 
+        @include media-breakpoint-down(xl){        
+            padding: 0 16px;        
+        }  
+        @include media-breakpoint-down(lg){        
+            border-radius: 0 0 4px 4px;      
+        }      
+        .top-bar-contact-lists{
+            --#{$prefix}link-color-rgb: var(--#{$prefix}white-rgb);
+            --#{$prefix}link-color: var(--#{$prefix}white);
+            --#{$prefix}link-hover-color: var(--#{$prefix}white);
+            --#{$prefix}link-hover-color-rgb: var(--#{$prefix}white-rgb);
+            --#{$prefix}top-bar-icons-color: var(--#{$prefix}white);
+        }
+        .link-hover-animation-1::before {            
+            background-color: var(--#{$prefix}white);
+        }
+    }      
+}
+
+@media screen and (min-width: 1400px) and (max-width: 1600px){
+    .logistics-navbar .navbar-nav{
+        --#{$prefix}nav-link-padding-y: 2rem;        
+    }
+    .section-header{
+        &.sticky{ 
+            .navbar-nav{
+                --#{$prefix}nav-link-padding-y: 1.85rem;                
+            }            
+        }
+    }
+}
+// === Navbar ========================================= >>>>>
+
+
+// === Top-Bar ========================================= >>>>>
+
+.top-bar{
+    .social-icons{
+        --#{$prefix}social-icons-size: 24px;
+    }
+}
+.top-bar-contact-lists{
+    --#{$prefix}link-color-rgb: var(--#{$prefix}secondary-rgb);
+    --#{$prefix}link-color: var(--#{$prefix}secondary);
+    --#{$prefix}link-hover-color: var(--#{$prefix}secondary);
+    --#{$prefix}link-hover-color-rgb: var(--#{$prefix}secondary-rgb);
+    --#{$prefix}top-bar-icons-color: var(--#{$prefix}primary);
+    .topbar-contact-icon{
+        --#{$prefix}contact-icon-stroke-color: var(--#{$prefix}top-bar-icons-color);
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;       
+        color: var(--#{$prefix}top-bar-icons-color);        
+        &.icon-border{
+            border: 1px solid var(--#{$prefix}top-bar-icons-color);
+            border-radius: 50%;        
+        }
+    }
+    &.contact-separator{
+        li{
+            border-right: 1px solid #fff;
+            padding-right: 20px;
+            &:last-child{
+                border-right: none;
+                padding-right: 0;
+            }
+        }
+        @include media-breakpoint-down(lg){
+            li{
+                border-right: none;
+                padding-right: 0;            
+            }
+        }
+    }   
+}
+// === Top-Bar ========================================= >>>>>

@@ -1,0 +1,356 @@
+// === Testimonial-1 ========================================= >>>>>
+.testimonialSwiper-1-buttons{    
+    .testimonialSwiper-1-button-prev{
+        position: absolute;
+        top: 50%;
+        left: 0;
+        z-index: 1;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        transition: $transition-base;
+        border-radius: 50%;
+        &:hover{
+            background-color: var(--#{$prefix}primary);
+            .chevron-right-icon {
+                --#{$prefix}chevron-right-icon-stroke-color: var(--#{$prefix}white);
+            }
+        }
+    }
+    .testimonialSwiper-1-button-next{
+        position: absolute;
+        top: 50%;
+        right: 0;
+        z-index: 1;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        transition: $transition-base;
+        border-radius: 50%;
+        &:hover{
+            background-color: var(--#{$prefix}primary);
+            .chevron-right-icon {
+                --#{$prefix}chevron-right-icon-stroke-color: var(--#{$prefix}white);
+            }
+        }
+    }
+    .chevron-right-icon{    
+        --#{$prefix}chevron-right-icon-stroke-color: var(--#{$prefix}primary);          
+    }
+}
+.testimonial-author-image{
+    height: 80px;
+    width: 80px;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+    opacity: .4;
+    transition: all .4s ease-in-out;
+}
+.testimonial-details-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    max-width: 760px;
+    margin: 0 auto;
+    margin-top: 1rem;
+    @include media-breakpoint-down(xl){
+        max-width: 580px; 
+        gap: 32px;
+    }
+}
+
+.testimonial-author-image-wrapper{
+    width: 120px;
+    height: 121px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.testimonial-thumb-swiper{
+    max-width: 384px;
+    .swiper-slide-next,.swiper-slide-prev{
+        cursor: pointer;
+    }
+}
+
+.testimonial-slide-container {  
+    margin:auto;
+}
+
+.testimonial-thumb-swiper .swiper-slide-active {
+    .testimonial-author-image{
+        height: 120px;
+        width: 120px;
+        opacity: 1;
+    }
+}
+.testimonial-thumb-swiper2{
+    .swiper-slide-next{        
+        .testimonial-author-details{            
+            opacity: 1;            
+            position: relative;            
+        }       
+    }
+}
+
+// === Testimonial-1 ========================================= >>>>>
+
+
+// === Testimonial-2 ========================================= >>>>>
+.testimonialSwiper-2-buttons{
+    position: absolute;
+    width: 100%;
+    left: 70px;
+    z-index: 1;
+    justify-content: center;
+    bottom: 60px;
+    @include media-breakpoint-down(lg){
+        left: auto;
+        right: 0;
+        bottom: 28%;        
+        justify-content: end;
+        width: fit-content;
+    }
+    @include media-breakpoint-down(md){        
+        bottom: 30%;        
+    }
+}
+
+.testimonial-2-image-wrapper{
+    height: 400px;
+    min-height: 400px;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }    
+}
+
+.testimonial-2-author-image{
+    width: 70px;
+    height: 70px;
+    
+    img{
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.testimonial-contents{
+    @include media-breakpoint-up(lg){        
+        bottom: 40px;       
+    }
+    position: relative;    
+}
+@media screen and (min-width: 320px) and (max-width: 399.9px){
+    .testimonialSwiper-2-buttons{        
+        bottom: 36%;
+        .arrow-icon-3.arrow-style-1{
+            width: 30px;
+            height: 30px;
+            svg{
+                width: 16px;
+            }
+        }
+    }
+         
+}
+
+// === Testimonial-2 ========================================= >>>>>
+
+
+
+// === Testimonial-3 ========================================= >>>>>
+.testimonialSwiper-3-buttons{
+    .arrow-icon-3{    
+        --#{$prefix}arrow-icon-3-stroke-color: var(--#{$prefix}primary); 
+        overflow: hidden;
+        transition: $transition-base;
+        svg{        
+            stroke: var(--#{$prefix}arrow-icon-3-stroke-color);   
+            transition: $transition-base;     
+        }   
+    }
+    .testimonialSwiper-3-button-prev,.testimonialSwiper-3-button-next{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border: 1px solid var(--#{$prefix}primary);
+        border-radius: 50%;
+        transition: $transition-base;
+        background-color: transparent;
+
+        &:hover{
+            background-color: var(--#{$prefix}primary);
+            .arrow-icon-3{    
+                --#{$prefix}arrow-icon-3-stroke-color: var(--#{$prefix}white);
+            }
+        }
+    }
+}
+
+.testimonialSwiper-swiper-pagination{
+    position: absolute;
+    bottom: -16px !important;
+    .swiper-pagination-bullet-active{
+        --swiper-pagination-color: var(--#{$prefix}primary);
+    }
+    .swiper-pagination-bullet{
+        --swiper-pagination-bullet-inactive-color: #D9D9D9;
+        --swiper-pagination-bullet-inactive-opacity: 1;
+    }
+}
+
+.testimonial-3-wrapper{
+    --#{$prefix}testimonial-3-wrapper-bg: var(--#{$prefix}body-bg);
+    --#{$prefix}testimonial-author-name-color: var(--#{$prefix}primary);
+
+    background-color: var(--#{$prefix}testimonial-3-wrapper-bg);
+    box-shadow: 0 0rem 0.9rem rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: all .6s ease-in-out;
+    .testimonial-3-author{
+        color: var(--#{$prefix}testimonial-author-name-color);
+        transition: all .6s ease-in-out;
+    }
+    .testimonial-details{
+        transition: all .6s ease-in-out;
+    }
+    @include media-breakpoint-down(lg){        
+        padding: 16px;       
+    }
+}
+
+.swiper-slide-active{
+    .testimonial-3-wrapper.testimonial-active-style{
+        --#{$prefix}testimonial-3-wrapper-bg: var(--#{$prefix}secondary);
+        --#{$prefix}testimonial-author-name-color: var(--#{$prefix}white);
+        box-shadow: none;
+        .quote-icon{
+            --#{$prefix}quote-icon-bg: var(--#{$prefix}white);
+            --#{$prefix}quote-icon-color: var(--#{$prefix}primary);
+        }
+        .testimonial-details{
+            color: var(--#{$prefix}white);
+        }
+    }
+}
+// === Testimonial-3 ========================================= >>>>>
+
+.testimonial-5-contents{
+    padding: 120px 0 180px 0;
+    @include media-breakpoint-down(xl){        
+        padding: 100px 0 130px 0;       
+    }
+    @include media-breakpoint-down(md){        
+        padding: 60px 0 100px 0;       
+    }
+}
+
+.testimonial-image-5{
+    --#{$prefix}testimonial-image-5-height: 430px;
+    height: var(--#{$prefix}testimonial-image-5-height);
+    min-height: var(--#{$prefix}testimonial-image-5-height);
+    position: relative;
+    z-index: 1;
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    @include media-breakpoint-down(xxl){        
+        --#{$prefix}testimonial-image-5-height: 370px;       
+    }
+    @include media-breakpoint-down(xl){        
+        --#{$prefix}testimonial-image-5-height: 360px;       
+    }   
+}
+.testimonial-5-wrapper{
+    --#{$prefix}testimonial-5-wrapper-width:  730px; 
+    --#{$prefix}quote-icon-lg-spacing: 140px; 
+    max-width: var(--#{$prefix}testimonial-5-wrapper-width);
+    position: absolute;
+    top: 0;
+    left: 0;    
+    .quote-icon-lg{
+        position: relative;
+        right: var(--#{$prefix}quote-icon-lg-spacing);
+    }
+    @include media-breakpoint-down(xxl){        
+        --#{$prefix}testimonial-5-wrapper-width:  700px; 
+        --#{$prefix}quote-icon-lg-spacing: 200px;     
+        .quote-icon-lg img{
+            width: 200px;
+        }  
+    }
+    @include media-breakpoint-down(xl){        
+        --#{$prefix}testimonial-5-wrapper-width:  640px; 
+        .quote-icon-lg img{
+            width: 170px;
+        }  
+        .testimonial-3-wrapper{
+            padding: 24px;
+        }
+    }
+    @include media-breakpoint-down(lg){        
+        --#{$prefix}testimonial-5-wrapper-width: 500px; 
+        --#{$prefix}quote-icon-lg-spacing: 168px; 
+        .quote-icon-lg img{
+            width: 130px;
+            height: 130px;
+            object-fit: contain;
+        }          
+    }
+    @include media-breakpoint-down(md){        
+        position: relative;     
+        --#{$prefix}quote-icon-lg-spacing: auto;  
+        .quote-icon-lg img{
+            width: 90px;
+            height: 90px;
+            object-fit: contain;
+        }   
+    }
+}
+.testimonialSwiper-5-buttons{
+    position: relative;
+    top: 30px;
+    .arrow-icon-3{    
+        --#{$prefix}arrow-icon-3-stroke-color: var(--#{$prefix}body-color); 
+        --#{$prefix}arrow-style-1-bg: transparent; 
+        --#{$prefix}arrow-style-1-size: 60px; 
+        --#{$prefix}arrow-style-1-radius: 4px; 
+        border: 2px solid var(--#{$prefix}body-color);
+        @include media-breakpoint-down(lg){        
+            --#{$prefix}arrow-style-1-size: 50px;     
+        }
+    }
+    .testimonialSwiper-2-button-next,.testimonialSwiper-2-button-prev{
+        &:hover{
+            .arrow-icon-3{    
+                --#{$prefix}arrow-icon-3-stroke-color: var(--#{$prefix}white); 
+                --#{$prefix}arrow-style-1-bg: var(--#{$prefix}primary); 
+                border: 2px solid var(--#{$prefix}primary);
+            }
+        }
+    }
+}

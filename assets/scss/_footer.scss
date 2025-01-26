@@ -1,0 +1,62 @@
+// === Footer-Section ========================================= >>>>>
+.section-footer{
+    --#{$prefix}link-color-rgb: var(--#{$prefix}body-color-style-1-rgb);
+    --#{$prefix}link-color: var(--#{$prefix}body-color-style-1);
+    --#{$prefix}link-hover-color: var(--#{$prefix}body-color-style-1);
+    --#{$prefix}link-hover-color-rgb: var(--#{$prefix}body-color-style-1-rgb);
+    --#{$prefix}copyright-text-color: var(--#{$prefix}body-color-style-1);
+    &.footer-landing{
+        --#{$prefix}copyright-text-color: var(--#{$prefix}secondary);
+        --#{$prefix}link-color-rgb: var(--#{$prefix}secondary-rgb);
+        --#{$prefix}link-color: var(--#{$prefix}secondary);
+        --#{$prefix}link-hover-color: var(--#{$prefix}primary);
+        --#{$prefix}link-hover-color-rgb: var(--#{$prefix}primary-rgb);
+    }
+}
+.footer-separator{
+    border-bottom: 1px solid var(--#{$prefix}body-color);
+}
+.footer-subscription{    
+    @include media-breakpoint-up(xl){
+        max-width: 341px;
+    }
+}
+.copyright-text{
+    font-size: 16px;
+    font-weight: 300;    
+    color: var(--#{$prefix}copyright-text-color);
+}
+.copyright-text-style-2{
+    font-size: 18px;
+    font-weight: 500;    
+}
+
+.arrow-icon-wrapper{   
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    background-color:  var(--#{$prefix}primary);
+    border: 0;
+}
+
+.footer-address{
+    @include media-breakpoint-up(md){
+        max-width: 230px;
+    }
+    
+}
+.footer-form-wrapper{
+    .arrow-icon-wrapper {        
+        transition: all .4s ease-in-out;
+        &:hover{
+            background-color: var(--#{$prefix}secondary);
+        }
+    }
+}
+// === Footer-Section ========================================= >>>>>

@@ -1,0 +1,160 @@
+
+// === Buttons ========================================= >>>>>
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .4s ease-in-out;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;   
+    width: fit-content;    
+    @include media-breakpoint-down(lg){
+        --#{$prefix}btn-font-size: 16px;
+    }
+}
+.btn-primary {
+    --#{$prefix}btn-bg: var(--#{$prefix}primary);
+    --#{$prefix}btn-border-color: var(--#{$prefix}primary);      
+    --#{$prefix}btn-color: var(--#{$prefix}white);
+    --#{$prefix}btn-hover-bg: var(--#{$prefix}secondary);
+    --#{$prefix}btn-active-bg: var(--#{$prefix}secondary);
+    --#{$prefix}btn-hover-color: var(--#{$prefix}white);
+    --#{$prefix}btn-active-color: var(--#{$prefix}white); 
+    --#{$prefix}btn-hover-border-color: var(--#{$prefix}secondary);   
+    --#{$prefix}btn-active-border-color: var(--#{$prefix}secondary); 
+}
+.btn-outline-secondary {
+    --#{$prefix}btn-bg: transparent;
+    --#{$prefix}btn-color: var(--#{$prefix}secondary);    
+    --#{$prefix}btn-border-color: var(--#{$prefix}body-color-style-2);
+    --#{$prefix}btn-hover-color: var(--#{$prefix}white);
+    --#{$prefix}btn-active-color: var(--#{$prefix}white);
+    --#{$prefix}btn-hover-bg: var(--#{$prefix}primary);
+    --#{$prefix}btn-active-bg: var(--#{$prefix}primary);
+    --#{$prefix}btn-hover-border-color: var(--#{$prefix}primary);  
+    --#{$prefix}btn-active-border-color: var(--#{$prefix}primary);  
+}
+
+.btn-secondary {
+    --#{$prefix}btn-bg: var(--#{$prefix}secondary);
+    --#{$prefix}btn-color: var(--#{$prefix}white);    
+    --#{$prefix}btn-border-color: var(--#{$prefix}secondary);
+    --#{$prefix}btn-hover-color: var(--#{$prefix}white);
+    --#{$prefix}btn-active-color: var(--#{$prefix}white);
+    --#{$prefix}btn-hover-bg: var(--#{$prefix}primary);
+    --#{$prefix}btn-active-bg: var(--#{$prefix}primary);
+    --#{$prefix}btn-hover-border-color: var(--#{$prefix}primary);  
+    --#{$prefix}btn-active-border-color: var(--#{$prefix}primary);  
+}
+
+.btn-link{
+    --#{$prefix}btn-padding-x:0;
+    --#{$prefix}btn-padding-y:0;
+    --#{$prefix}btn-color: var(--#{$prefix}link-color);
+    --#{$prefix}btn-bg: transparent;
+    --#{$prefix}btn-border-color: transparent;
+    --#{$prefix}btn-hover-color: var(--#{$prefix}link-hover-color);
+    --#{$prefix}btn-hover-border-color: transparent;
+    --#{$prefix}btn-active-color: var(--#{$prefix}link-hover-color);
+    --#{$prefix}btn-active-border-color: transparent;    
+    --#{$prefix}btn-box-shadow: none;
+    --#{$prefix}btn-focus-shadow-rgb: none;
+
+    padding: 0 2px 2px 0;
+    &.link-hover-animation-1::before{
+        bottom: 1px;
+    }
+    
+    &:hover{
+        .btn-link-icon svg{
+            transform: rotate(45deg);            
+        }
+    }
+}
+
+.btn-link-style-2{
+    --#{$prefix}btn-padding-x:0;
+    --#{$prefix}btn-padding-y:0;
+    --#{$prefix}btn-color: var(--#{$prefix}secondary);
+    --#{$prefix}btn-bg: transparent;
+    --#{$prefix}btn-font-size: 14px;
+    --#{$prefix}btn-font-weight: 400;
+    --#{$prefix}btn-border-color: transparent;
+    --#{$prefix}btn-hover-color: var(--#{$prefix}link-hover-color);
+    --#{$prefix}btn-hover-border-color: transparent;
+    --#{$prefix}btn-active-color: var(--#{$prefix}link-hover-color);
+    --#{$prefix}btn-active-border-color: transparent;    
+    --#{$prefix}btn-box-shadow: none;
+    --#{$prefix}btn-focus-shadow-rgb: none;
+
+    padding: 0 2px 2px 0;
+    &.link-hover-animation-1::before{
+        bottom: 1px;
+    } 
+    
+    &:hover{
+        .chevron-down-icon{
+            --#{$prefix}chevron-down-icon-stroke-color: var(--#{$prefix}link-hover-color);  
+        }
+    }
+    
+}
+
+.btn-sm{
+    --#{$prefix}btn-font-weight: 500;
+    --#{$prefix}btn-font-size: 16px;
+}
+.btn-lg{
+    --#{$prefix}btn-padding-y: 1.032rem;
+    --#{$prefix}btn-padding-x: 2.022rem;
+    --#{$prefix}btn-font-size: 18px;
+}
+.btn-reply{
+    --#{$prefix}btn-color: var(--#{$prefix}body-color);
+    --#{$prefix}btn-hover-color: var(--#{$prefix}primary);
+    --#{$prefix}btn-padding-y: 0;
+    --#{$prefix}btn-padding-x: 0;
+}
+.wp-block-tag-cloud{
+    --#{$prefix}tag-cloud-bg: var(--#{$prefix}body-bg);
+    --#{$prefix}link-color: var(--#{$prefix}body-color);
+    --#{$prefix}link-color-rgb: var(--#{$prefix}body-color-rgb);
+    --#{$prefix}link-hover-color: var(--#{$prefix}white);
+    --#{$prefix}link-hover-color-rgb: var(--#{$prefix}white-rgb);
+    transition: $transition-base;
+    a{
+        padding: 12px 20px;
+        border-radius: 4px;
+        background-color: var(--#{$prefix}tag-cloud-bg);
+        transition: $transition-base;
+        box-shadow: 0 0.1rem 0.95rem rgba(0, 0, 0, 0.06);        
+        &:hover{
+            --#{$prefix}tag-cloud-bg: var(--#{$prefix}primary);
+        }
+    }
+}
+
+.btn-arrow{
+    --#{$prefix}btn-arrow-size: 60px;
+    --#{$prefix}btn-arrow-bg: #A1B2C3;
+    background-color: var(--#{$prefix}btn-arrow-bg);
+    width: var(--#{$prefix}btn-arrow-size);
+    height: var(--#{$prefix}btn-arrow-size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    transition: transform .3s ease-in-out;
+    &:hover{
+        transform: translateY(-2px);
+        transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
+        box-shadow: rgba(var(--#{$prefix}primary-rgb), 0.4) 0px 3px 30px;
+        svg{
+            transform: rotate(45deg);
+        }
+    }
+}
+// === Buttons ========================================= >>>>>
