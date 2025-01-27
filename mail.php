@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     
 
-    $to = "s1dxu9@gmail.com"; // Replace with your email address
+    $to = "irupneetkaur@gmail.com"; // Replace with your email address
     $subject = "New Contact Form Submission";
 
     $headers = "From: $email";
@@ -51,12 +51,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $mailBody .= "City: $city\n";
     $mailBody .= "Message:\n$message";
 
-    $to = "s1dxu9@gmail.com"; // Replace with your email address
-    $subject = "Logistip Scontact";
+    $to = "irupneetkaur@gmail.com"; // Replace with your email address
+    $subject = "Davren Trucking - Contact Form";
 
     $message_2 = '<html>
     <head>
-        <title>Logistip Contact</title>
+        <title>Davren Trucking Contact</title>
         <style>
             body{
                 color: #000;
@@ -112,7 +112,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <body>
         <div class="container custom-container-1 container-position">
             <div class="logo">           
-                <img src="https://themeperch.net/html/Logistip/assets/images/logo.png" alt="Logistip">
+                <img src="https://davrentrucking.com/img/davren-trucking-logo.png" alt="Davren Trucking">
             </div>
             <div class="table-contents">
                 <h2>Logistip Contact</h2>
@@ -135,7 +135,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 </tr>
                 </table>
 
-                <p>&copy; 2023, Logistip, All Rights Reserved</p>
+                <p>&copy; 2025, Davren Trucking, All Rights Reserved</p>
             </div>  
         </div>      
     </body>
@@ -147,11 +147,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
     // More headers
-    $headers .= 'From: <webmaster@themeperch.net>' . "\r\n";
-    //$headers .= 'Cc: myboss@example.com' . "\r\n";
+    $headers .= 'From: <dispatch@davrentrucking.com>' . "\r\n";
+    //$headers .= 'Cc: sales@davrentrucking.com' . "\r\n";
     $sender_message = '<html>
     <head>
-        <title>Logistip Contact</title>
+        <title>Davren Trucking Contact</title>
         <style>
             body{
                 color: #000;
@@ -236,10 +236,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         </div> 
         <div class="container custom-container-1">
             <div class="logo">           
-                <img src="https://themeperch.net/html/logistip/assets/images/logo-dark.png" alt="logistip">
+                <img src="https://davrentrucking.com/img/davren-trucking-logo.png" alt="Davren Trucking">
             </div>
             <div class="table-contents">
-                <h2>Logistip Contact</h2>
+                <h2>Davren Trucking Contact</h2>
                 <table>
                 <tr>
                     <th>Name</th>
@@ -259,7 +259,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 </tr>
                 </table>
 
-                <p>&copy; 2023, Logistip, All Rights Reserved</p>
+                <p>&copy; 2025, Davren Trucking, All Rights Reserved</p>
             </div>  
         </div>     
     </body>
