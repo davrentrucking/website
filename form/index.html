@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Contact Form</title>
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta content="Logistic, Delivery, delivery, Winnipeg, Canada, US">
+	<meta name="name" content="content">
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<link rel="icon" type="image/jpg" href="davren_logo.svg">
+	<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;1,900&display=swap" rel="stylesheet">
+	<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"> -->
+	<script src="https://kit.fontawesome.com/7af973e003.js" crossorigin="anonymous"></script>
+	
+</head>
+<body>
+
+			<form action="https://formspree.io/f/meqbqwbv"  method="post">
+				<div class="name-dv animado" >
+					<label class="label2">
+						<input type="text" name="fname" value="" placeholder="First Name*" required>
+					</label>
+					<label>
+						<input type="text" name="lname" value="" placeholder="Last Name*" required>
+					</label>				
+				</div>
+		
+				<div class="num-div animado">
+					<label class="label2">
+						<input type="email" name="email" value="" placeholder="Email*" required>
+					</label>
+					<label>
+						<input type="text" name="phone" value="" placeholder="Phone*" required>
+					</label>
+				</div>
+				<input  class="textte animado" type="text" name="message" placeholder="Your message*" required>
+				<button type="submit" id="send">Send</button>
+			</form>
+			<div class="overlay" id="message">
+				<div class="popup" id="popup">
+					<a href="#" id="btn-cerrar" class="btn-cerrar"><i class="fas fa-times"></i></a>
+					<div class="men-te">
+						<span class="til-aler">Thank you for contacting us</span>
+						<div class="line-s" id="line2"></div>
+						<p>We receive your message and we are going to be in touch any time for send you a fast answer. <br><br>
+						Don't hesitate to contact us by phone
+						</p>
+					</div>
+				</div>
+			</div>	
+	
+<script src="Index.js" type="text/javascript" charset="utf-8" async defer></script>
+</body>
+</html>
