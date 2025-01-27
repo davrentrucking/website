@@ -44,13 +44,23 @@
         button:hover {
             background-color: #e65c00;
         }
+        .message {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .success {
+            color: green;
+        }
+        .error {
+            color: red;
+        }
     </style>
 </head>
 <body>
 
     <div class="form-container">
         <h2>Contact Us</h2>
-        <form id="contactForm" action="https://formspree.io/f/meqbqwbv" method="POST" onsubmit="return validateForm()">
+        <form id="contactForm">
             <label for="name">Full Name</label>
             <input type="text" id="name" name="name" required>
 
@@ -68,23 +78,42 @@
 
             <button type="submit">Send Message</button>
         </form>
+
+        <div id="responseMessage" class="message"></div>
     </div>
 
     <script>
-        function validateForm() {
-            const name = document.getElementById("name").value;
-            const email = document.getElementById("email").value;
-            const phone = document.getElementById("phone").value;
-            const city = document.getElementById("city").value;
-            const message = document.getElementById("message").value;
+        // Get form and response message elements
+        const form = document.getElementById('contactForm');
+        const responseMessage = document.getElementById('responseMessage');
 
-            // Basic validation checks
-            if (!name || !email || !phone || !city || !message) {
-                alert("Please fill out all fields.");
-                return false;
-            }
-            return true;
-        }
+        // Add submit event listener to the form
+        form.addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent default form submission
+
+            // Gather form data
+            const formData = new FormData(form);
+
+            // Send form data using Fetch API
+            fetch('https://formspree.io/f/meqbqwbv', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (response.ok) {
+                    responseMessage.textContent = 'Thank you for your message! We will get back to you soon.';
+                    responseMessage.className = 'message success';
+                    form.reset(); // Reset the form
+                } else {
+                    responseMessage.textContent = 'Oops! Something went wrong. Please try again later.';
+                    responseMessage.className = 'message error';
+                }
+            })
+            .catch(error => {
+                responseMessage.textContent = 'Oops! Something went wrong. Please try again later.';
+                responseMessage.className = 'message error';
+            });
+        });
     </script>
 
 </body>
