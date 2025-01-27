@@ -363,6 +363,67 @@
 						<div class="col-lg-7 col-xxl-8">
 							<div class="submit-form-wrapper bg-custom-light wow fadeIn" data-wow-duration="1.7s">
 								<h3 class="mb-40 text-lg-center">Get In Touch</h3>
+
+								  <div class="form-container">
+        <h2>Contact Us</h2>
+        <div class="class="submit-form row g-30""><form id="contactForm">
+           <div class="col-md-6"> <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required></div>
+
+           <div class="col-md-6"> <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required><div class="col-md-6">
+
+           <div class="col-md-6"> <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" pattern="^\d{10}$" placeholder="123-456-7890" required></div>
+
+           <div class="col-md-6"> <div class="col-md-6"><label for="city">City</label>
+            <input type="text" id="city" name="city" required></div>
+
+           <div class="col-md-6"> <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea></div>
+
+          <div class="col-12">									
+ <button class="btn btn-primary w-100" type="submit">Send Message</button></div>
+        </form></div>
+
+        <div id="responseMessage" class="message"></div>
+    </div>
+
+    <script>
+        // Get form and response message elements
+        const form = document.getElementById('contactForm');
+        const responseMessage = document.getElementById('responseMessage');
+
+        // Add submit event listener to the form
+        form.addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent default form submission
+
+            // Gather form data
+            const formData = new FormData(form);
+
+            // Send form data using Fetch API
+            fetch('https://formspree.io/f/meqbqwbv', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (response.ok) {
+                    responseMessage.textContent = 'Thank you for your message! We will get back to you soon.';
+                    responseMessage.className = 'message success';
+                    form.reset(); // Reset the form
+                } else {
+                    responseMessage.textContent = 'Oops! Something went wrong. Please try again later.';
+                    responseMessage.className = 'message error';
+                }
+            })
+            .catch(error => {
+                responseMessage.textContent = 'Oops! Something went wrong. Please try again later.';
+                responseMessage.className = 'message error';
+            });
+        });
+    </script>
+
+								
 								<form id="contactForm" class="submit-form row g-30">
 									<div class="col-md-6">										
 										<input type="text" class="form-control" id="InputName1" name="InputName" placeholder="Your Name" required="">
